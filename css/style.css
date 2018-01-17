@@ -72,18 +72,25 @@ li i{
     padding: 10px 0 30px 0;
 }
 
+.row{
+    text-align: center;
+}
+
 /*CONTAINER FOR ALL POSTS*/
 .posts-container{
     padding: 15px;
 }
 
-/*SINGLE POST CONTAINER*/
-.post-container{
+.post-container-border{
     border: 1px solid #d3d3d3;
-    transition: all 0.2s;
 }
 
-.post-container:hover{
+/*SINGLE POST CONTAINER*/
+.post-container > a{
+    border: 1px solid #d3d3d3;
+}
+
+.post-container > a:hover{
     border: 1px solid #94badf;
 }
 
@@ -190,21 +197,34 @@ h2{
     font-size: 2.5em;
     font-family: 'Courgette', cursive;
     font-weight: normal;
-    padding: 10px;
+    padding: 20px 20px 5px 20px;
 }
 
 h3{
     font-size: 1.1em;
-    padding-bottom: 10px;
+    font-weight: normal;
+    padding: 10px 20px 10px 20px;
+}
+
+h4{
+    font-size: 1.1em;
+    font-family: 'Courgette', cursive;
+    font-weight: lighter;
+    margin: 0 0 10px 0;
+}
+
+h4:nth-child(n+2){
+    margin: 10px 0 10px 0;
 }
 
 a > h3{
     padding: 10px;
 }
 
-p ~ h3{
-    padding: 20px 0 10px 0;
+p + h3{
+    margin-top: 10px;
 }
+
 
 .post-container h3{
     font-family: 'Courgette', cursive;
@@ -225,7 +245,10 @@ input::placeholder{
     color: #7298c3;
     font-size: 1.1em;
     text-transform: uppercase;
+}
 
+input:focus{
+    outline: none;
 }
 
 .text-caps{
@@ -282,6 +305,10 @@ video{
     .main-container-offset{
         position: relative;
         top: -70px;
+    }
+
+    .row{
+        text-align: unset;
     }
 
     .post-w60{
